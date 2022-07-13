@@ -1,1 +1,16 @@
-import django
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    name = "Hello World K"
+    return name
+
+@app.route('/good')
+def good():
+    name = "Good afternoon"
+    return name
+
+## おまじない
+if __name__ == "__main__":
+    app.run(debug=True)
